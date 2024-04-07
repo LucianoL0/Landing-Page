@@ -1,0 +1,465 @@
+/* font-family: "Raleway", sans-serif; */
+/* font-family: "Cinzel", serif; */
+:root {
+    --primary-color: #ffffff;
+    --segund-color: #000000;
+    --border-color: #dddddd;
+    --color-select: #e49329;
+    --gap: 3rem;
+    --shadow-color: #a05b00;
+}
+
+/* ELEMENTOS_CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 2.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Dancing Script", cursive;
+    ;
+}
+
+h1 {
+    font-size: 8rem;
+
+}
+
+h2 {
+    font-size: 7.5rem;
+}
+
+h3 {
+    font-size: 7rem;
+    position: relative;
+}
+
+h4 {
+    font-size: 6.5rem;
+}
+
+h5 {
+    font-size: 6rem;
+}
+
+h6 {
+    font-size: 5.5rem;
+}
+
+p {
+    font-size: 2.6rem;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+h3 a {
+    font-size: 6.4rem;
+    padding-left: 2rem;
+}
+
+.responsive-table {
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+}
+table caption {
+    font-size: 1.6rem;
+    font-style: italic;
+    text-align: left;
+    padding: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table td, table th{
+    white-space: nowrap;
+    text-align: left;
+    padding: 1rem;
+    border: 0.1rem solid var(--border-color);
+}
+
+table th {
+    background-color: var(--border-color);
+}
+
+tfoot td {
+    background-color: var(--border-color);
+}
+
+/* ESTRUTURA-CSS */
+
+.man-content {
+    background-image: url(/LandingPage/img/Lines-5s-1084px\ \(1\).svg);
+    background-size: cover;
+    background-position: center center;
+    color: var(--primary-color);
+    min-height: 100vh;
+}
+
+.man-content2 {
+    color: var(--segund-color);
+    min-height: 100vh;
+}
+
+.man-con {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+/* .space-top {
+    height: 9.2rem;
+} */
+
+.con1-grid {
+    position: relative;
+    top: 0;
+    padding-top: 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    padding-bottom: 8rem;
+}
+
+.con1-flex,
+.con1-img {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.con1-flex h1 {
+    margin-bottom: 4rem;
+}
+
+.con1-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ra-content {
+    max-width: 64rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-one {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--gap);
+    counter-reset: grid-counter;
+    padding-bottom: 5rem;
+}
+
+.grid-one h6 {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.descri {
+    margin-bottom: 10rem;
+}
+
+.grid-one h6::before {
+    font-family: "Raleway", sans-serif;
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 7rem;
+    top: -2rem;
+    left: 0;
+    transform: rotate(10deg);
+}
+
+.about {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+}
+.gallery {
+    padding-top: 8rem;
+}
+
+.img-ran img {
+    border-radius: 0.7rem;
+    border: solid var(--segund-color);
+    transition: all 300ms ease-in-out;
+}
+.img-ran img:hover {
+    transform: translate(1rem,1rem) scale(1.03) translate(-1rem,-1rem);
+    border: solid var(--color-select);
+}
+
+.form-group {
+    grid-column: span 2;
+}
+label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group fieldset {
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+.form-group fieldset div:not(.full-width) {
+    flex: 1 1 32rem;
+}
+.form-group fieldset div input, .form-group div textarea {
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    font-size: 2.6rem;
+    outline: none;
+    border: 0.3rem solid var(--primary-color);
+}
+
+.form-group fieldset div input:focus, .form-group div textarea:focus {
+    border: 0.3rem solid var(--color-select);
+}
+
+ fieldset .full-width {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+.form-group button {
+    border: 0.5rem solid var(--primary-color);
+    padding: 1.5rem 2rem;
+    background: none;
+    color: var(--primary-color);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+.form-group button:hover {
+    background: var(--primary-color);
+    color: var(--color-select);
+    border: 0.5rem solid var(--color-select);
+}
+
+legend {
+    font-style: italic;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+footer {
+    text-align: center;
+}
+
+.footer-name {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--segund-color);
+    transition: all 100ms ease-in-out;
+}
+.footer-name:hover {
+    text-decoration: underline;
+    color: var(--color-select);
+}
+/* MENU-CSS */
+
+.menu {
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1;
+}
+
+a:not(.footer-name, .back-to-top) {
+    text-decoration: none;
+    color: var(--segund-color);
+    padding: 3rem;
+}
+
+.links-menu {
+    font-size: 2rem;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li a {
+    display: block;
+    position: relative;
+
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--color-select);
+    transition: all 200ms ease-in-out;
+    border-radius: 0.2rem;
+    z-index: 1;
+
+}
+
+.menu ul li a:hover:after {
+    z-index: -1;
+    height: 1rem;
+}
+
+.menu section h3 a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0.2rem;
+    top: 1rem;
+    bottom: 1rem;
+    background-color: var(--color-select);
+    transition: all 200ms ease-in-out;
+    border-radius: 0.2rem;
+    z-index: 1;
+
+}
+
+.menu section h3 a:hover:after {
+    z-index: -1;
+    width: 1rem;
+}
+
+.close-menu {
+    display: none;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    background: var(--segund-color);
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-select);
+    border-radius: 50%;
+    font-size: 3rem;
+    text-decoration: none;
+    filter: opacity(40%);
+    transition: all 200ms ease-in-out;
+}
+.back-to-top:hover {
+    border-radius: 1rem;
+    filter: opacity(100%);
+}
+
+@media (max-width: 1210px) and (min-width: 799px) {
+    .grid-one {
+        grid-template-columns: 1fr 1fr;
+    }
+    .img-ran img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .con1-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-one {
+        grid-template-columns: 1fr;
+    }
+
+    .img-ran img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1074px) {
+    .menu {
+        bottom: 0;
+        text-align: center;
+    }
+
+    .menu-content, .menu-content ul {
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .menu-content {
+        height: 100%;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .close-menu-label::after {
+        content: '☰';
+        position: fixed;
+        z-index: 3;
+        top: 3rem;
+        right: 3rem;
+        background-color: var(--segund-color);
+        color: var(--color-select);
+        font-size: 5rem;
+        line-height: 5rem;
+        width: 5rem;
+        height: 5rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+        border-radius: 0.6rem;
+    }
+    .close-menu:checked~.menu {
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        content: '✕';
+    }
+}
+
