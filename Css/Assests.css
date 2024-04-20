@@ -106,7 +106,7 @@ tfoot td {
 /* ESTRUTURA-CSS */
 
 .man-content {
-    background-image: url(/LandingPage/img/Lines-5s-1084px\ \(1\).svg);
+    background-image: url(../img/svg/Lines-5s-1084px\ \(1\).svg);
     background-size: cover;
     background-position: center center;
     color: var(--primary-color);
